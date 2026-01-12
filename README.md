@@ -1,12 +1,10 @@
-# gestionarrecetas
-
 Javier López
 Petar Petrov
 # Gestor de Recetas
 
 ## Descripción del proyecto
 Aplicación en Python para gestionar recetas de cocina, con funcionalidades para añadir, listar, buscar y eliminar recetas.  
-Incluye integración con la API pública de themealdb.com para buscar recetas online.
+Incluye integración con la API pública de themealdb.com para buscar recetas online. Se usa una libreria externa para traducir los ingredientes del Español a Ingles para buscar en la API mas facilmente.
 
 ## Instrucciones de instalación
 1. Clonar el repositorio:
