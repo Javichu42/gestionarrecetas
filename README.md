@@ -1,6 +1,6 @@
 # gestionarrecetas
 
-
+Javier López
 Petar Petrov
 # Gestor de Recetas
 
