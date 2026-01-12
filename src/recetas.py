@@ -23,19 +23,3 @@ def listar_recetas_menu():
         print("Ingredientes:")
         for ing in receta["ingredientes"]:
             print(f"- {ing}")
-
-# Buscar receta por nombre
-def buscar_receta(nombre):
-    for receta in lista_recetas:
-        if receta["nombre"].lower() == nombre.lower():
-            return receta
-    return None
-
-# Eliminar receta
-def eliminar_receta(nombre):
-    receta = buscar_receta(nombre)
-    if receta:
-        lista_recetas.remove(receta)
-        print(f"Receta '{nombre}' eliminada.")
-    else:
-        print(f"No se encontró la receta '{nombre}'.")
