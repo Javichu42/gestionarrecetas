@@ -1,7 +1,12 @@
 import matplotlib.pyplot as plt
 from recetas import lista_recetas
 from collections import Counter
+import os
 
+data = "data"
+
+if not os.path.exists(data):
+    os.makedirs(data)
 
 def grafico_ingredientes_por_receta():
 
@@ -19,6 +24,10 @@ def grafico_ingredientes_por_receta():
     plt.title("Ingredientes por receta")
     plt.xticks(rotation=45, ha="right")
     plt.tight_layout()
+
+    ruta = os.path.join(data, "ingredientes_por_receta.png")
+    plt.savefig(ruta)
+
     plt.show()
 
 
@@ -40,6 +49,10 @@ def grafico_ingredientes_comunes():
     plt.figure()
     plt.pie(cantidades, labels=ingredientes, autopct="%1.1f%%")
     plt.title("Ingredientes más comunes")
+
+    ruta = os.path.join(data, "ingredientes_comunes.png")
+    plt.savefig(ruta)
+
     plt.show()
 
 
