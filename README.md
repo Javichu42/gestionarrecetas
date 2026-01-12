@@ -8,7 +8,7 @@ Incluye integración con la API pública de themealdb.com para buscar recetas on
 
 ## Instrucciones de instalación
 1. Clonar el repositorio:
-2. Instalar librerías externas:
+2. Instalar librerías externas: pip install googletrans==4.0.0-rc1
 3. Abrir los archivos en Python (VS Code, PyCharm, etc.)  
 
 ## Uso
