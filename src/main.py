@@ -1,3 +1,8 @@
+from recetas import añadirreceta, listasrecetas
+from archivos import exportarceteas, importarecetas
+from api import buscarrecetasapi
+from stats import verestadisticas
+
 def mostrarmenu():
     print("\n=== Gestor de Recetas ===")
     print("1. Añadir Receta")
