@@ -1,7 +1,7 @@
 from recetas import añadir_receta_menu, listar_recetas_menu
 from archivos import exportar_recetas, importar_recetas
 from api import buscarrecetasapi
-##from stats import verestadisticas
+from stats import verestadisticas
 
 def mostrarmenu():
     print("\n=== Gestor de Recetas ===")
@@ -33,8 +33,8 @@ def main():
         elif option == "5":
             buscarrecetasapi()
 
-        #elif option == "6":
-            #verestadisticas()
+        elif option == "6":
+            verestadisticas()
 
         elif option == "0":
             print("Saliendo del programa... 👋")
