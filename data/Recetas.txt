@@ -1,0 +1,6 @@
+Tortilla de Patata
+Huevo,Patata
+
+Huevo Frito
+Huevo,Sal,Chorizo
+

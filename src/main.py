@@ -1,5 +1,5 @@
 from recetas import añadir_receta_menu, listar_recetas_menu
-##from archivos import exportarceteas, importarecetas
+from archivos import exportar_recetas, importar_recetas
 from api import buscarrecetasapi
 ##from stats import verestadisticas
 
@@ -24,11 +24,11 @@ def main():
         elif option == "2":
             listar_recetas_menu()
 
-        #elif option == "3":
-            #exportarceteas()
+        elif option == "3":
+            exportar_recetas()
 
-        #elif option == "4":
-            #importarecetas()
+        elif option == "4":
+            importar_recetas()
 
         elif option == "5":
             buscarrecetasapi()
