@@ -23,3 +23,9 @@ def mostrar_recetas_api(lista_recetas):
         return
     for i, receta in enumerate(lista_recetas, start=1):
         print(f"{i}. {receta['strMeal']}")
+
+
+def buscarrecetasapi():
+    ingrediente = input("Ingrediente a buscar: ")
+    recetas = buscar_recetas_por_ingrediente(ingrediente)
+    mostrar_recetas_api(recetas)

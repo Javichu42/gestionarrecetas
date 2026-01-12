@@ -1,7 +1,7 @@
-from recetas import añadirreceta, listasrecetas
-from archivos import exportarceteas, importarecetas
+from recetas import añadir_receta_menu, listar_recetas_menu
+##from archivos import exportarceteas, importarecetas
 from api import buscarrecetasapi
-from stats import verestadisticas
+##from stats import verestadisticas
 
 def mostrarmenu():
     print("\n=== Gestor de Recetas ===")
@@ -18,11 +18,11 @@ def main():
         mostrarmenu()
         option = input("Selecciona una opció: ")
 
-        ##if option == "1":
-            #añadirreceta()
+        if option == "1":
+            añadir_receta_menu()
 
-        #elif option == "2":
-            #listasrecetas()
+        elif option == "2":
+            listar_recetas_menu()
 
         #elif option == "3":
             #exportarceteas()
@@ -30,13 +30,13 @@ def main():
         #elif option == "4":
             #importarecetas()
 
-        #elif option == "5":
-            #buscarrecetasapi()
+        elif option == "5":
+            buscarrecetasapi()
 
         #elif option == "6":
             #verestadisticas()
 
-        if option == "0":
+        elif option == "0":
             print("Saliendo del programa... 👋")
             break
 
