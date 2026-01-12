@@ -43,3 +43,48 @@ def exportar_recetas():
     except Exception as e:
         print(f"Error al exportar: {e}")
         
+
+def importar_recetas():
+    nombre_archivo = input("Nombre del archivo (con extensión): ")
+
+    if not os.path.exists(nombre_archivo):
+        print("Error: el archivo no existe.")
+        return
+
+    try:
+        if nombre_archivo.endswith(".json"):
+            with open(nombre_archivo, "r", encoding="utf-8") as f:
+                datos = json.load(f)
+                for receta in datos:
+                    lista_recetas.append(
+                        crear_receta(receta["nombre"], receta["ingredientes"])
+                    )
+            print("Recetas importadas desde JSON.")
+
+        elif nombre_archivo.endswith(".csv"):
+            with open(nombre_archivo, "r", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                for fila in reader:
+                    ingredientes = fila["ingredientes"].split(",")
+                    lista_recetas.append(
+                        crear_receta(fila["nombre"], ingredientes)
+                    )
+            print("Recetas importadas desde CSV.")
+
+        elif nombre_archivo.endswith(".txt"):
+            with open(nombre_archivo, "r", encoding="utf-8") as f:
+                lineas = f.read().strip().split("\n\n")
+                for bloque in lineas:
+                    partes = bloque.split("\n")
+                    nombre = partes[0]
+                    ingredientes = partes[1].split(",")
+                    lista_recetas.append(
+                        crear_receta(nombre, ingredientes)
+                    )
+            print("Recetas importadas desde TXT.")
+
+        else:
+            print("Formato de archivo no soportado.")
+
+    except Exception as e:
+        print(f"Error al importar: formato incorrecto o archivo dañado.\n{e}")
