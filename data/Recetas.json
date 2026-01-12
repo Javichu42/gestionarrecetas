@@ -1,0 +1,17 @@
+[
+    {
+        "nombre": "Tortilla de Patata",
+        "ingredientes": [
+            "Huevo",
+            "Patata"
+        ]
+    },
+    {
+        "nombre": "Huevo Frito",
+        "ingredientes": [
+            "Huevo",
+            "Sal",
+            "Chorizo"
+        ]
+    }
+]
