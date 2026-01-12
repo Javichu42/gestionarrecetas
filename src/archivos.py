@@ -17,7 +17,7 @@ def exportar_recetas():
     opcion = input("Elige formato: ")
     nombre_archivo = input("Nombre del archivo (sin extensión): ")
 
-    ruta = os.path.join(DATA_DIR, nombre_archivo)
+    ruta = os.path.join(data, nombre_archivo)
 
     try:
         if opcion == "1":
@@ -52,7 +52,7 @@ def exportar_recetas():
 def importar_recetas():
     nombre_archivo = input("Nombre del archivo (con extensión): ")
 
-    ruta = os.path.join(DATA_DIR, nombre_archivo)
+    ruta = os.path.join(data, nombre_archivo)
 
     if not os.path.exists(ruta):
         print("Error: el archivo no existe en la carpeta data.")
