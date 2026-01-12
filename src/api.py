@@ -1,4 +1,11 @@
 import requests
+from googletrans import Translator
+
+translator = Translator()
+
+def traducir_ingrediente(ingrediente):
+    traduccion = translator.translate(ingrediente, src="es", dest="en")
+    return traduccion.text
 
 # Buscar recetas por ingrediente
 def buscar_recetas_por_ingrediente(ingrediente):
@@ -26,6 +33,8 @@ def mostrar_recetas_api(lista_recetas):
 
 
 def buscarrecetasapi():
-    ingrediente = input("Ingrediente a buscar: ")
-    recetas = buscar_recetas_por_ingrediente(ingrediente)
+    ingrediente_es = input("Ingrediente a buscar: ")
+    ingrediente_en = traducir_ingrediente(ingrediente_es)
+
+    recetas = buscar_recetas_por_ingrediente(ingrediente_en)
     mostrar_recetas_api(recetas)
