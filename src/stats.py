@@ -56,8 +56,36 @@ def grafico_ingredientes_comunes():
     plt.show()
 
 
+def grafico_media_ingredientes():
+
+    if not lista_recetas:
+        print("No hay recetas para mostrar estadísticas.")
+        return
+
+    nombres = [receta["nombre"] for receta in lista_recetas]
+    cantidades = [len(receta["ingredientes"]) for receta in lista_recetas]
+
+    media = sum(cantidades) / len(cantidades)
+
+    plt.figure()
+    plt.bar(nombres, cantidades)
+    plt.axhline(media, linestyle="--", label=f"Media: {media:.2f}")
+
+    plt.xlabel("Recetas")
+    plt.ylabel("Número de ingredientes")
+    plt.title("Media de ingredientes por receta")
+    plt.legend()
+    plt.xticks(rotation=45, ha="right")
+    plt.tight_layout()
+
+    ruta = os.path.join(data, "media_ingredientes.png")
+    plt.savefig(ruta)
+    plt.show()
+
+
 def verestadisticas():
 
     print("\nMostrando estadísticas...")
     grafico_ingredientes_por_receta()
+    grafico_media_ingredientes()
     grafico_ingredientes_comunes()
