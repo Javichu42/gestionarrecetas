@@ -25,9 +25,9 @@ Incluye integración con la API pública de themealdb.com para buscar recetas on
 ## Archivos
 - `recetas.py`: gestión de recetas
 - `api.py`: funciones para la API de recetas
-- `archivos.py`: exportar/importar recetas (hecho por otro compañero)
-- `main.py`: menú principal (hecho por otro compañero)
+- `archivos.py`: exportar/importar recetas
+- `main.py`: menú principal
 - `README.md`: documentación del proyecto
 
 ## Capturas y gráficos
-(Los gráficos se mostrarán en `estadisticas.py`, realizados por otro compañero)
+(Los gráficos se mostrarán en `data/`)
